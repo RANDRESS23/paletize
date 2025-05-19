@@ -23,6 +23,7 @@ export const Palette = ({
       });
     } catch (error) {
       toast.error("No se pudo copiar el color");
+      console.error("Error al copiar el color:", error);
     }
   };
 

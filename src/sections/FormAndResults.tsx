@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Form } from "@/components/Form";
 import { ExternalLink, Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
