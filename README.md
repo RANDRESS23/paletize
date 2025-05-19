@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Paletize
 
-## Getting Started
+**Paletize** es una herramienta web que permite extraer automáticamente las paletas de colores utilizadas en cualquier repositorio público de GitHub. Es ideal para desarrolladores y diseñadores que desean conocer los colores que inspiran proyectos reales.
 
-First, run the development server:
+![Captura Principal](./screenshots/home.png)
+
+---
+
+## 🌐 Demo en producción
+
+👉 [paletize.vercel.app](https://paletize.vercel.app)
+
+---
+
+## 🧠 ¿Cómo funciona?
+
+1. El usuario inicia sesión (puede usar Google, GitHub o un usuario personalizado).
+2. Ingresa la URL de un repositorio público de GitHub.
+3. La aplicación analiza el código del proyecto y extrae todos los colores encontrados en archivos CSS, SCSS, JS, JSX, TS, TSX y otros.
+4. Se genera una paleta visual con los colores utilizados en ese repositorio.
+
+---
+
+## ✨ Características principales
+
+- Autenticación segura con Clerk.
+- Extracción inteligente de colores desde cualquier repositorio.
+- Interfaz intuitiva y moderna.
+- Diseño responsive.
+- Copia rápida del color al portapapeles con notificación toast.
+- Ejemplos de prueba incluidos para facilitar el uso.
+
+---
+
+## 🔐 Autenticación con Clerk
+
+Para garantizar que solo usuarios autenticados puedan generar paletas, utilizamos [**Clerk**](https://clerk.dev):
+
+- Permite inicio de sesión con Google, GitHub o nombre de usuario.
+- Solo los usuarios logueados pueden analizar repositorios y generar paletas.
+- Clerk se encarga de toda la gestión de usuarios y sesiones de manera segura y eficiente.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+| Tecnología       | Uso                                      |
+|------------------|-------------------------------------------|
+| **React**        | Librería principal para la interfaz        |
+| **Next.js**      | Framework de React con renderizado SSR    |
+| **Tailwind CSS** | Diseño rápido, responsive y moderno        |
+| **Clerk**        | Autenticación segura                       |
+| **Sonner**       | Notificaciones tipo toast elegantes        |
+| **Lucide Icons** | Íconos ligeros y modernos                  |
+| **GitHub REST API** | Para obtener el contenido de los repos |
+| **Vercel**       | Hosting y despliegue del proyecto          |
+
+---
+
+## 📸 Capturas de pantalla
+
+### 🏠 Pantalla principal
+![Pantalla principal](./screenshots/home.png)
+
+### 🔐 Autenticación con Clerk
+![Inicio de sesión](./screenshots/login.png)
+
+### 🎨 Paleta de colores generada
+![Paleta generada](./screenshots/palette.png)
+
+> Puedes reemplazar estos archivos en la carpeta `/screenshots`.
+
+---
+
+## 🧪 Repositorios de ejemplo
+
+Si no sabes por dónde empezar, puedes probar con estos repositorios populares:
+
+- `https://github.com/lolalolitaland.com`
+- `https://github.com/la-velada-web-oficial`
+- `https://github.com/jsconf.es`
+
+---
+
+## ⚙️ Cómo correr el proyecto localmente
 
 ```bash
+git clone https://github.com/tu-usuario/paletize.git
+cd paletize
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
