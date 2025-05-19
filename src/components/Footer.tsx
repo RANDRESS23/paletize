@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="w-full border-t py-6 md:py-0">
       <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row mx-auto max-w-4xl">
-        <div className="flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2">
           <Palette className="h-5 w-5 text-purple-500" />
           <p className="text-sm text-muted-foreground">© 2025 Paletize</p>
         </div>
@@ -19,6 +19,10 @@ export const Footer = () => {
           >
             Raúl Quimbaya
           </Link>
+        </div>
+        <div className="flex md:hidden items-center gap-2">
+          <Palette className="h-5 w-5 text-purple-500" />
+          <p className="text-sm text-muted-foreground">© 2025 Paletize</p>
         </div>
         <div className="flex items-center gap-4">
           <Link

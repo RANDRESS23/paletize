@@ -5,18 +5,18 @@ import { Button } from "./ui/button";
 
 export const Header = () => {
   return (
-    <header className="border-b border-[#222] bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-50">
+    <header className="border-b border-[#222] bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 px-4">
       <div className="container mx-auto py-4 flex items-center justify-between max-w-4xl">
         <div className="flex items-center gap-2">
           <Palette className="h-6 w-6 text-purple-500" />
           <span className="font-bold text-xl">Paletize</span>
         </div>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="flex items-center gap-6">
           <Link
             href="https://github.com/RANDRESS23/paletize"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+            className="text-sm text-gray-400 hover:text-white transition-colors hidden md:flex items-center gap-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
