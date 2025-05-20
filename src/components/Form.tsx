@@ -14,7 +14,7 @@ interface FormProps {
   isLoading: boolean;
   setIsLoading: (loading: boolean) => void;
   setHasResults: (hasResults: boolean) => void;
-  setPaletteData: (data: PaletteData) => void;
+  setPaletteData: (data: PaletteData | null) => void;
 }
 
 export const Form = ({
@@ -36,6 +36,7 @@ export const Form = ({
       return;
     }
 
+    setPaletteData(null);
     setIsLoading(true);
 
     const { owner, repo } = parseGitHubUrl(repoUrl);
